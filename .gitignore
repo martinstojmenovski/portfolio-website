@@ -30,5 +30,5 @@ yarn-error.log*
 .env*
 
 # npm package lock files (optional, but useful if you want to ignore them)
-package-lock.json
+
 yarn.lock
