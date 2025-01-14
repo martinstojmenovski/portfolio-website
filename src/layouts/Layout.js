@@ -11,7 +11,7 @@ import Header from "./Header";
 const Layout = ({ children, pageClassName }) => {
   useEffect(() => {
     activeAnimation();
-    initCursor();
+    // initCursor();
     window.addEventListener("scroll", activeAnimation);
     window.addEventListener("scroll", stickyNav);
   }, []);
@@ -37,7 +37,7 @@ const Layout = ({ children, pageClassName }) => {
         <Footer />
       </div>
       {/* cursor */}
-      <div className="cursor" />
+      {/* <div className="cursor" /> */}
     </Fragment>
   );
 };

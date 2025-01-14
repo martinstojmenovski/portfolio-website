@@ -1535,6 +1535,13 @@ hr {
 	-webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1);
 	-o-transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1);
 }
+@media screen and (max-width: 768px) {
+	.header {
+		padding: 10px;
+	}
+	
+
+}
 
 .header.opened {
 	overflow: auto;
@@ -2515,7 +2522,7 @@ hr {
 
 .section.hero-started .title {
 	font-family: "Jost";
-	font-size: 90px;
+	font-size: 70px;
 	line-height: 1.2;
 	color: #FFF;
 	font-weight: 700;
@@ -5373,8 +5380,8 @@ a.wp-block-button__link {
 		padding-left: 20px;
 	}
 	.header.sticky {
-		padding-top: 25px;
-		padding-bottom: 25px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	.menu-full ul li.has-children > a i {
 		font-size: 16px;
@@ -5382,14 +5389,14 @@ a.wp-block-button__link {
 
 	/*started hero*/
 	.section.hero-started .content {
-		padding-top: 120px;
+		padding-top: 80px;
 	}
 	.section.hero-started .titles {
 		margin-bottom: 420px;
 		min-height: 160px;
 	}
 	.section.hero-started .title {
-		font-size: 40px;
+		font-size: 30px;
 	}
 	.section.hero-started .lui-subtitle {
 		font-size: 13px;
@@ -5398,7 +5405,7 @@ a.wp-block-button__link {
 		font-size: 24px;
 	}
 	.section.hero-started .slide {
-		top: 680px;
+		top: 620px;
 		transform: scale(0.5);
 	}
 	.hero-started .btn-lnk {

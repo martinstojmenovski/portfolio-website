@@ -43,7 +43,7 @@ const Index = () => {
                     data-animate="active"
                   >
                     <span>
-                      <b>Zoé</b> Miller{" "}
+                      <b>Stojmenovski</b> Martin{" "}
                     </span>
                   </h1>
                   <div className="label lui-subtitle">
@@ -91,8 +91,8 @@ const Index = () => {
               >
                 <img
                   decoding="async"
-                  src="assets/images/profile2.png"
-                  alt="<b>Zoé</b> Miller"
+                  src="assets/images/Profile6.png"
+                  alt="<b>Martin</b> Stojmenovski"
                 />
                 <span className="circle circle-1" />
                 <span
