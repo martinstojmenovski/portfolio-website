@@ -23,21 +23,28 @@ const Header = () => {
           <div className="row">
             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
               {/* logo */}
-              <div className="logo">
+             
+              <div 
+              className="logo"
+              >
+                
                 <Link href="/" legacyBehavior>
+               
                   <a>
-                    <img
+                    {/* <img
                       width={228}
                       height={38}
                       src="assets/images/logo2.png"
                       alt=""
-                    />
+                    /> */}
+                    <h4 >MAST</h4> <span className="green-circle-logo"></span>
+                  
                   </a>
                 </Link>
               </div>
             </div>
             <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
-              {/* switcher btn */}
+              {/* switcher btn   */}
               <a
                 href="#"
                 className={`switcher-btn ${day ? "" : "active"}`}
