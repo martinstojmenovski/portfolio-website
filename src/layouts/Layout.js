@@ -1,9 +1,9 @@
 import { Fragment, useEffect } from "react";
 import {
   activeAnimation,
-  initCursor,
   jarallaxAnimation,
   stickyNav,
+  shadowNavbar
 } from "../utils";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -11,9 +11,9 @@ import Header from "./Header";
 const Layout = ({ children, pageClassName }) => {
   useEffect(() => {
     activeAnimation();
-    // initCursor();
-    window.addEventListener("scroll", activeAnimation);
-    window.addEventListener("scroll", stickyNav);
+    // window.addEventListener("scroll", activeAnimation);
+    // window.addEventListener("scroll", stickyNav);
+      window.addEventListener("scroll", shadowNavbar);
   }, []);
 
   useEffect(() => {

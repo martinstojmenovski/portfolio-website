@@ -23,12 +23,9 @@ const Header = () => {
           <div className="row">
             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
               {/* logo */}
-
-              <div
-                className="logo"
-              >
-                <Link href="/" legacyBehavior>
-                  <h4 className="logo-mast">MAST <span className="green-circle-logo"></span></h4>
+              <div className="logo">
+                <Link href="/" legacyBehavior> 
+                    <h4 className="logo-mast">MAST <span className="green-circle-logo"></span></h4>
                 </Link>
               </div>
             </div>
@@ -180,8 +177,9 @@ const Header = () => {
                               </a>
                             </li>
                             <li
-                              className={`menu-item menu-item-has-children has-children ${pageToggle ? "opened" : "closed"
-                                }`}
+                              className={`menu-item menu-item-has-children has-children ${
+                                pageToggle ? "opened" : "closed"
+                              }`}
                             >
                               <a
                                 className="splitting-text-anim-2"

@@ -75,6 +75,12 @@ const App = ({ Component, pageProps }) => {
           type="text/css"
           media="all"
         />
+         <link
+          rel="stylesheet"
+          href="assets/css/menu.css"
+          type="text/css"
+          media="all"
+        />
         <link
           rel="stylesheet"
           href="assets/css/dark.css"

@@ -218,14 +218,14 @@ body.dark-skin {
 **/
 
 @media screen and (max-width: 1200px) {
-	.dark-skin .header.sticky {
+	/* .dark-skin .header.sticky {
 		background: #1d222a;
 	}
 }
 
 .dark-skin .header.sticky .navbar.default:before {
 	background: #1d222a;
-}
+} */
 
 .dark-skin .menu-btn span {
 	background: #fff;
@@ -759,4 +759,13 @@ body.dark-skin {
 	.dark-skin .menu-full ul li ul li.opened ul {
 		background: #1d1d25;
 	}
+}
+
+/* after template css */
+@media screen and (max-width: 768px) {
+	.dark-skin .header {
+		background-color: #222831;
+	}
+	
+
 }

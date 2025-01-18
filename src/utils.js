@@ -11,20 +11,22 @@ export const activeAnimation = () => {
     }
   });
 };
-
-export const stickyNav = () => {
-  let offset = window.scrollY;
-  const sticky = document.querySelectorAll(".header");
-  sticky.forEach((sticky) => {
-    if (sticky) {
-      if (offset > 100) {
-        sticky.classList.add("animate-in", "sticky");
-      } else {
-        sticky.classList.remove("animate-in", "sticky");
-      }
-    }
-  });
-};
+export const shadowNavbar = () => {
+  
+}
+// export const stickyNav = () => {
+//   let offset = window.scrollY;
+//   const sticky = document.querySelectorAll(".header");
+//   sticky.forEach((sticky) => {
+//     if (sticky) {
+//       if (offset > 100) {
+//         sticky.classList.add("animate-in", "sticky");  
+//       } else {
+//         sticky.classList.remove("animate-in", "sticky");
+//       }
+//     }
+//   });
+// };
 
 export const toggleMenu = (e) => {
   e.preventDefault();
