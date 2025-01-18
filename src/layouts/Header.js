@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <Fragment>
       {/* Header */}
-      <header className="header">
+      <header className="header shadows">
         <div className="header__builder">
           <div className="row">
             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">

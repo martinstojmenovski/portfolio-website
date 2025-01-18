@@ -11,9 +11,26 @@ export const activeAnimation = () => {
     }
   });
 };
+
 export const shadowNavbar = () => {
-  
+  let offset = window.scrollY;
+  const screenWidth = window.screen.width;
+    const header = document.querySelectorAll(".header");
+    const headerShadowNum = () => {
+      if(offset > 100){
+        return 0.1
+      }else{
+        return `${offset / 1000}`
+      } 
+    }
+    header.forEach(header => {
+      if(screenWidth <= 768){
+        header.style.boxShadow = `0 2px 6px rgba(0, 0, 0, ${headerShadowNum()})`;
+      }else return
+    });
 }
+
+
 // export const stickyNav = () => {
 //   let offset = window.scrollY;
 //   const sticky = document.querySelectorAll(".header");

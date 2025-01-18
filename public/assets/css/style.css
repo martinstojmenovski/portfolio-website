@@ -5679,6 +5679,6 @@ a.wp-block-button__link {
 	background-color: transparent; /* Transparent background */
 	display: inline-block; /* Ensures it behaves like a circle */
   }
-  .header .shadow2 {
-	box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
-  }
+  /* .shadows {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.099);
+  } */
