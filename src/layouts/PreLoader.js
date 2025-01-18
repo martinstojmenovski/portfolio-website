@@ -7,10 +7,7 @@ const PreLoader = () => {
         <div className="centrize full-width">
           <div className="vertical-center">
             <div className="spinner-logo">
-              <img
-                src="assets/images/logo2.png"
-                alt="Luique - Personal Portfolio HTML Template"
-              />
+            <h4 className="logo-mast">MAST <span className="green-circle-logo"></span></h4>
               <div className="spinner-dot" />
               <div className="spinner spinner-line" />
             </div>

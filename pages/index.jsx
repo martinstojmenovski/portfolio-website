@@ -54,9 +54,8 @@ const Index = () => {
                 <div className="description">
                   <div>
                     <p>
-                      From France, Paris. I have rich experience in web design,
-                      also I am good at wordpress. I love to talk with you about
-                      our unique.
+                      From Colorado, Denver. I have rich experience in web design,
+                      also I am good at wordpress. Let’s chat about your next project!
                     </p>
                   </div>
                   <div className="social-links">
@@ -117,7 +116,7 @@ const Index = () => {
                   <ul>
                     <li>
                       <span className="num">
-                        12 <strong>+</strong>
+                        4 <strong>+</strong>
                       </span>
                       <span className="value">
                         Years of <strong>Experience</strong>

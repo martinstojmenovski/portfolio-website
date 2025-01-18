@@ -23,23 +23,12 @@ const Header = () => {
           <div className="row">
             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
               {/* logo */}
-             
-              <div 
-              className="logo"
+
+              <div
+                className="logo"
               >
-                
                 <Link href="/" legacyBehavior>
-               
-                  <a>
-                    {/* <img
-                      width={228}
-                      height={38}
-                      src="assets/images/logo2.png"
-                      alt=""
-                    /> */}
-                    <h4 >MAST</h4> <span className="green-circle-logo"></span>
-                  
-                  </a>
+                  <h4 className="logo-mast">MAST <span className="green-circle-logo"></span></h4>
                 </Link>
               </div>
             </div>
@@ -191,9 +180,8 @@ const Header = () => {
                               </a>
                             </li>
                             <li
-                              className={`menu-item menu-item-has-children has-children ${
-                                pageToggle ? "opened" : "closed"
-                              }`}
+                              className={`menu-item menu-item-has-children has-children ${pageToggle ? "opened" : "closed"
+                                }`}
                             >
                               <a
                                 className="splitting-text-anim-2"
