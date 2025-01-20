@@ -11,8 +11,7 @@ import Header from "./Header";
 const Layout = ({ children, pageClassName }) => {
   useEffect(() => {
     activeAnimation();
-    // window.addEventListener("scroll", activeAnimation);
-    // window.addEventListener("scroll", stickyNav);
+    window.addEventListener("scroll", activeAnimation); // function responsible for displaying the elements when scroll
       window.addEventListener("scroll", shadowNavbar);
   }, []);
 
