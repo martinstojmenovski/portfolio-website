@@ -1,5 +1,8 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/portfolio-website" : "";
+
 export default function Document() {
   return (
     <Html lang="en">
@@ -15,19 +18,19 @@ export default function Document() {
         />
 
         {/* Vendor CSS */}
-        <link rel="stylesheet" href="/assets/css/vendors/bootstrap.css" />
-        <link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.css" />
-        <link rel="stylesheet" href="/assets/css/vendors/magnific-popup.css" />
-        <link rel="stylesheet" href="/assets/css/vendors/splitting.css" />
-        <link rel="stylesheet" href="/assets/css/vendors/swiper.css" />
-        <link rel="stylesheet" href="/assets/css/vendors/animate.css" />
+        <link rel="stylesheet" href={`${basePath}/assets/css/vendors/bootstrap.css`} />
+        <link rel="stylesheet" href={`${basePath}/assets/fonts/font-awesome/css/font-awesome.css`} />
+        <link rel="stylesheet" href={`${basePath}/assets/css/vendors/magnific-popup.css`} />
+        <link rel="stylesheet" href={`${basePath}/assets/css/vendors/splitting.css`} />
+        <link rel="stylesheet" href={`${basePath}/assets/css/vendors/swiper.css`} />
+        <link rel="stylesheet" href={`${basePath}/assets/css/vendors/animate.css`} />
 
         {/* Theme CSS */}
-        <link rel="stylesheet" href="/assets/css/style.css" />
-        <link rel="stylesheet" href="/assets/css/dark.css" />
+        <link rel="stylesheet" href={`${basePath}/assets/css/style.css`} />
+        <link rel="stylesheet" href={`${basePath}/assets/css/dark.css`} />
 
         {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${basePath}/favicon.ico`} />
       </Head>
       <body>
         <Main />
