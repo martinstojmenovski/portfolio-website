@@ -2,12 +2,15 @@
   "name": "mast-next.js",
   "version": "1.1",
   "private": true,
+  "homepage": "https://martinstojmenovski.github.io/portfolio-website",
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "npm run build && npm run export && gh-pages -d out"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -19,5 +22,8 @@
     "react-dom": "18.2.0",
     "splitting": "^1.0.6",
     "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
