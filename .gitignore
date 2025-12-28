@@ -1,0 +1,31 @@
+# Node modules
+/node_modules/
+
+# Next.js build output
+/.next/
+/out/
+
+# Static files
+/public/static/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs and editors
+/.idea/
+/.vscode/
+
+# MacOS files
+.DS_Store
+
+# npm package lock files (optional)
+/package-lock.json
+/yarn.lock
