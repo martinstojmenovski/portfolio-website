@@ -2,14 +2,12 @@
   "name": "mast-next.js",
   "version": "1.1",
   "private": true,
-  "homepage": "https://martinstojmenovski.github.io/portfolio-website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-    "deploy": "next build && gh-pages -d out"
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
