@@ -1577,3 +1577,18 @@
 .slideOutUp {
   animation-name: slideOutUp;
 }
+
+
+
+.scroll-animate {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.scroll-animate.animate__active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}

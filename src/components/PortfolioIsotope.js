@@ -2,25 +2,27 @@ import Isotope from "isotope-layout";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 const PortfolioIsotope = ({ noViewMore }) => {
-  // Isotope
+    // Isotope
   const isotope = useRef();
   const [filterKey, setFilterKey] = useState("*");
-  useEffect(() => {
-    isotope.current = new Isotope(".works-items", {
-      itemSelector: ".works-col",
-      //    layoutMode: "fitRows",
-      percentPosition: true,
-      masonry: {
-        columnWidth: ".works-col",
-      },
-      animationOptions: {
-        duration: 750,
-        easing: "linear",
-        queue: false,
-      },
-    });
-    return () => isotope.current.destroy();
+
+ useEffect(() => {
+  isotope.current = new Isotope(".works-items", {
+    itemSelector: ".works-col",
+    percentPosition: true,
+    masonry: {
+      columnWidth: ".works-col",
+    },
+    animationOptions: {
+      duration: 750,
+      easing: "linear",
+      queue: false,
+    },
   });
+
+  return () => isotope.current.destroy();
+}, []); // only once on mount
+
   useEffect(() => {
     if (isotope.current) {
       filterKey === "*"
@@ -28,9 +30,13 @@ const PortfolioIsotope = ({ noViewMore }) => {
         : isotope.current.arrange({ filter: `.${filterKey}` });
     }
   }, [filterKey]);
+
+  
   const handleFilterKeyChange = (key) => () => {
     setFilterKey(key);
   };
+
+
   const activeBtn = (value) => (value === filterKey ? "active" : "");
   return (
     <Fragment>

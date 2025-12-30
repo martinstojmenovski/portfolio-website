@@ -8,12 +8,16 @@ import {
   servicesSliderProps,
   testimonialsSliderProps,
 } from "../src/sliderProps";
+
 const PortfolioIsotope = dynamic(
   () => import("../src/components/PortfolioIsotope"),
   {
     ssr: false,
   }
 );
+
+
+
 const Index = () => {
   return (
     <Layout pageClassName={"home"}>
@@ -48,7 +52,7 @@ const Index = () => {
                   </h1>
                   <div className="label lui-subtitle">
                     {" "}
-                    I am <strong>Web Developer</strong>
+                    <strong>I am a Web Developer</strong>
                   </div>
                 </div>
                 <div className="description">
@@ -58,7 +62,7 @@ const Index = () => {
                        I also manage Google Ads campaigns focused on real results. Let’s talk about your next project!
                     </p>
                   </div>
-                  <div className="social-links">
+                  <div className="social-links"> 
                     <a target="_blank" rel="nofollow" href="https://github.com/martinstojmenovski">
                       <i aria-hidden="true" className="fab fa-github" />
                     </a>
