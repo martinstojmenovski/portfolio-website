@@ -1847,7 +1847,7 @@ hr {
 }
 
 .menu-full-container .container {
-	margin: auto;
+	margin: 100px auto auto auto;
 }
 
 .menu-full {
@@ -5825,8 +5825,8 @@ a.wp-block-button__link {
 
 	.menu-full-overlay .menu-full-container {
 		padding: 0 15px;
-		margin-top: 140px;
-		height: calc(100% - 140px);
+		margin-top: 40px;
+		height: calc(100% - 40px);
 	}
 
 	.elementor-default .menu-full-overlay .menu-full-container {
