@@ -1783,8 +1783,8 @@ hr {
 	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
-	transition: all 1s cubic-bezier(0.3, 0, 0.3, 1);
-	-webkit-transition: all 1s cubic-bezier(0.3, 0, 0.3, 1);
+	transition: all 0.5s cubic-bezier(0.3, 0, 0.3, 1);
+	-webkit-transition: all 0.5s cubic-bezier(0.3, 0, 0.3, 1);
 }
 
 .menu-full-overlay:before {
@@ -1795,8 +1795,8 @@ hr {
 	width: 100%;
 	height: 100%;
 	background: #fff;
-	transition: all 1s cubic-bezier(0.3, 0, 0.3, 1);
-	-webkit-transition: all 1s cubic-bezier(0.3, 0, 0.3, 1);
+	transition: all 0.5s cubic-bezier(0.3, 0, 0.3, 1);
+	-webkit-transition: all 0.5s cubic-bezier(0.3, 0, 0.3, 1);
 	-webkit-transform: skew(10deg, 0deg);
 	transform: skew(10deg, 0deg);
 }
@@ -1847,7 +1847,7 @@ hr {
 }
 
 .menu-full-container .container {
-	margin: 100px auto auto auto;
+	margin: 100px auto auto 15px;
 }
 
 .menu-full {
@@ -2108,13 +2108,13 @@ hr {
 }
 
 .menu-full-overlay.is-open .menu-full ul li.has-children>a i {
-	transition: opacity 0.7s cubic-bezier(0.3, 0, 0.3, 1) 1s, transform 0.7s cubic-bezier(0.3, 0, 0.3, 1) 0s;
-	-webkit-transition: opacity 0.7s cubic-bezier(0.3, 0, 0.3, 1) 1s, transform 0.7s cubic-bezier(0.3, 0, 0.3, 1) 0s;
+	transition: opacity 0.4s cubic-bezier(0.3, 0, 0.3, 1) 1s, transform 0.7s cubic-bezier(0.3, 0, 0.3, 1) 0s;
+	-webkit-transition: opacity 0.4s cubic-bezier(0.3, 0, 0.3, 1) 1s, transform 0.7s cubic-bezier(0.3, 0, 0.3, 1) 0s;
 }
 
 .menu-full-overlay.is-open .menu-full ul li.has-children.opened>a i {
-	transition: opacity 0.7s cubic-bezier(0.3, 0, 0.3, 1) 1s, transform 0.7s cubic-bezier(0.3, 0, 0.3, 1) 0s;
-	-webkit-transition: opacity 0.7s cubic-bezier(0.3, 0, 0.3, 1) 1s, transform 0.7s cubic-bezier(0.3, 0, 0.3, 1) 0s;
+	transition: opacity 0.4s cubic-bezier(0.3, 0, 0.3, 1) 1s, transform 0.7s cubic-bezier(0.3, 0, 0.3, 1) 0s;
+	-webkit-transition: opacity 0.4s cubic-bezier(0.3, 0, 0.3, 1) 1s, transform 0.7s cubic-bezier(0.3, 0, 0.3, 1) 0s;
 }
 
 .menu-full ul li.has-children>a i {

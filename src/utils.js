@@ -46,7 +46,7 @@ export const toggleMenu = (e) => {
     setTimeout(function () {
       document.querySelector(".menu-full-overlay").classList.remove("visible");
       menu.classList.remove("no-touch");
-    }, 1000);
+    }, 400);
   } else {
     menu.classList.add("active", "no-touch");
     document.body.classList.add("no-scroll");
@@ -58,7 +58,7 @@ export const toggleMenu = (e) => {
         .querySelector(".menu-full-overlay")
         .classList.add("has-scroll", "animate-active");
       menu.classList.remove("no-touch");
-    }, 1000);
+    }, 400);
   }
   return false;
 };
