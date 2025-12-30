@@ -2,26 +2,63 @@ import Isotope from "isotope-layout";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 const PortfolioIsotope = ({ noViewMore }) => {
-    // Isotope
+  // Isotope
   const isotope = useRef();
   const [filterKey, setFilterKey] = useState("*");
 
- useEffect(() => {
-  isotope.current = new Isotope(".works-items", {
-    itemSelector: ".works-col",
-    percentPosition: true,
-    masonry: {
-      columnWidth: ".works-col",
-    },
-    animationOptions: {
-      duration: 750,
-      easing: "linear",
-      queue: false,
-    },
-  });
 
-  return () => isotope.current.destroy();
-}, []); // only once on mount
+
+
+  useEffect(() => {
+    const images = document.querySelectorAll(".works-items img");
+    let loadedCount = 0;
+
+    images.forEach((img) => {
+      if (img.complete) {
+        loadedCount++;
+      } else {
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === images.length) {
+            initIsotope();
+          }
+        };
+      }
+    });
+
+    if (loadedCount === images.length) initIsotope();
+
+    function initIsotope() {
+      isotope.current = new Isotope(".works-items", {
+        itemSelector: ".works-col",
+        percentPosition: true,
+        masonry: { columnWidth: ".works-col" },
+        animationOptions: { duration: 750, easing: "linear", queue: false },
+      });
+      // Force layout immediately so all items are recognized
+  isotope.current.layout();
+    }
+
+    return () => isotope.current?.destroy();
+  }, []);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          isotope.current?.layout(); // refresh layout
+        }
+      });
+    });
+
+    document.querySelectorAll(".works-item").forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+
 
   useEffect(() => {
     if (isotope.current) {
@@ -31,7 +68,7 @@ const PortfolioIsotope = ({ noViewMore }) => {
     }
   }, [filterKey]);
 
-  
+
   const handleFilterKeyChange = (key) => () => {
     setFilterKey(key);
   };
@@ -42,8 +79,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
     <Fragment>
       <div className="works-box">
         <div
-          className="filter-links scrolla-element-anim-1 scroll-animate"
-          data-animate="active"
+          className="filter-links"
+          
         >
           <a
             className={`c-pointer lui-subtitle ${activeBtn("*")}`}
@@ -91,8 +128,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
 
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-react ">
             <div
-              className="works-item scrolla-element-anim-1 scroll-animate"
-              data-animate="active"
+              className="works-item "
+             
             >
               <div className="image">
                 <div className="img">
@@ -135,8 +172,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
           </div>
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12  sorting-nextjs ">
             <div
-              className="works-item scrolla-element-anim-1 scroll-animate"
-              data-animate="active"
+              className="works-item "
+             
             >
               <div className="image">
                 <div className="img">
@@ -179,8 +216,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
           </div>
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-nextjs ">
             <div
-              className="works-item scrolla-element-anim-1 scroll-animate"
-              data-animate="active"
+              className="works-item "
+             
             >
               <div className="image">
                 <div className="img">
@@ -221,13 +258,13 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-          
-         
+
+
 
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-react ">
             <div
-              className="works-item scrolla-element-anim-1 scroll-animate"
-              data-animate="active"
+              className="works-item "
+           
             >
               <div className="image">
                 <div className="img">
@@ -267,10 +304,10 @@ const PortfolioIsotope = ({ noViewMore }) => {
               />
             </div>
           </div>
-           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-javascript ">
+          <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-javascript ">
             <div
-              className="works-item scrolla-element-anim-1 scroll-animate"
-              data-animate="active"
+              className="works-item "
+              
             >
               <div className="image">
                 <div className="img">
@@ -313,8 +350,8 @@ const PortfolioIsotope = ({ noViewMore }) => {
           </div>
           <div className="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-javascript ">
             <div
-              className="works-item scrolla-element-anim-1 scroll-animate"
-              data-animate="active"
+              className="works-item "
+             
             >
               <div className="image">
                 <div className="img">
@@ -357,13 +394,13 @@ const PortfolioIsotope = ({ noViewMore }) => {
             </div>
           </div>
         </div>
-        
+
         {!noViewMore && (
           <div className="load-more-link">
             <Link legacyBehavior href="/works">
               <a
-                className="btn scrolla-element-anim-1 scroll-animate"
-                data-animate="active"
+                className="btn "
+               
               >
                 <span>View More</span>
               </a>

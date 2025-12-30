@@ -1523,6 +1523,7 @@ hr {
 	top: 0;
 	width: 100%;
 	z-index: 90;
+	pointer-events: none;
 	/* transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1);
 	-moz-transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1);
 	-webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1);
@@ -1627,6 +1628,7 @@ hr {
 	float: left;
 	width: 121px;
 	font-size: 0;
+	pointer-events: auto;
 }
 
 .header .logo a {
@@ -1664,6 +1666,7 @@ hr {
 	width: 25px;
 	height: 30px;
 	text-align: center;
+	pointer-events: auto;
 }
 
 .switcher-btn .sw-before,
@@ -1713,6 +1716,7 @@ hr {
 	right: 0;
 	height: 30px;
 	width: 28px;
+	pointer-events: auto;
 }
 
 .header__builder .menu-btn,
