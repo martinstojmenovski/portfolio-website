@@ -14,7 +14,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <Head>
-        <title>MAST — Web Developer Portfolio</title>
+        <title>Marti — Web Developer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Martin Stojmenovski" />
       </Head>
