@@ -25,7 +25,7 @@ const Header = () => {
               {/* logo */}
               <div className="logo">
                 <Link href="/" legacyBehavior> 
-                    <h4 className="logo-mast">MAST <span className="green-circle-logo"></span></h4>
+                    <h4 className="logo-mast">marti<span className="green-circle-logo"></span></h4>
                 </Link>
               </div>
             </div>

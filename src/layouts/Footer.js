@@ -25,7 +25,7 @@ const Footer = () => {
                 className="copyright-text align-center scrolla-element-anim-1 scroll-animate"
                 data-animate="active"
               >
-                © {new Date().getFullYear()} <strong>MAST</strong>. All rights reserved
+                © {new Date().getFullYear()} <strong>marti</strong>. All rights reserved
               </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">

@@ -1170,7 +1170,7 @@ hr {
 .preloader .spinner-logo {
 	position: relative;
 	margin: 0 auto;
-	width: 114px;
+	width: 120px;
 	font-size: 0;
 }
 
@@ -5884,4 +5884,5 @@ a.wp-block-button__link {
 	/* Transparent background */
 	display: inline-block;
 	/* Ensures it behaves like a circle */
+	margin-left: 6px;
 }
